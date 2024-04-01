@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="form-cadastro" onsubmit="return false">
+        <section class="ladoEsquerdo">
+            
+        <div class="linha">
+            <label>Nome da planta:</label>
+            <input type="text" name="nome" maxlength="40" autocomplete="off">
+        </div>
+        <div class="linha">
+            <label>Especie:</label>
+            <input type="text" name="especie">
+        </div>
+        <div class="linha">
+            <label>Altura maxima:</label>
+            <input type="text" name="altura" maxlength="40" autocomplete="off" pattern="[0-9]+([,\.][0-9]+)?" title="Use um número válido (pode incluir vírgula ou ponto como separador decimal)" onkeydown="if(event.keyCode == 13) event.preventDefault();">
+        </div>
+        <div class="linha">
+            <label>Origem: </label>
+                <select name="origem">
+                    <option value="nada">-  -  -  -</option>
+                    <option value="eu">Africa</option>
+                    <option value="br">America</option>
+                    <option value="eu">Asia</option>
+                    <option value="eu">Europa</option>
+                    <option value="eu">Oceania</option>
+
+                </select>
+        </div>
+            
+        <br>
+        <input type="submit" name="enviar" value="Cadastrar" onclick="cadastrar()">
+        </section>
+        <section class="ladoDireito">
+            <div class="img">
+                <img src="img/arvore.png" alt="" srcset="" height="170px">
+            </div>
+        </section>
+    </form>
+
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
